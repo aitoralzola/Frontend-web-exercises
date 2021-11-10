@@ -1,0 +1,38 @@
+.nav-links{
+    padding: 15px;
+	border: 1px solid black;
+    text-align: center;
+}
+
+.link-style{
+    background-color: rgb(168, 192, 221);
+    width: 20%;
+    padding: 10px;
+    margin: 15px;
+    text-align: center;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+.img-izq{
+    float:left;
+    margin: 10px;
+}
+
+.img-der{
+    float:right;
+    margin: 10px;
+}
+
+.img-abajo{
+    float:left;
+    margin: 10px;
+}
+
+.p3{
+    clear:both
+}
+
+footer{
+    text-align: center;
+}

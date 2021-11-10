@@ -1,0 +1,181 @@
+:root {
+    --dark: #263238;
+    --light: #CFD8DC;
+    --bg: #CECECE;
+    --indigo: #304FFE;
+    --teal: #B2DFDB;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+/*MAIN*/
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+
+header{
+    background-color: var(--dark);
+    color: var(--light);
+    text-align: center;
+}
+
+nav{
+    display: flex;
+    background-color: var(--indigo);
+    bottom: 0;
+    order: 0;   /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+}
+
+.nav-item{
+    background-color: var(--teal);
+    border-radius: 4px;
+    color: var(--dark);
+    padding: 1vw;
+    margin: 2vw;
+    width: 100%;
+}
+
+
+section{
+    display: grid;
+    gap: 0.5rem;
+    margin: 1rem;
+    background-color: var(--bg);
+}
+
+
+article{
+    box-shadow: 5px;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 2px 0 18px 0 rgb(34, 36, 36);
+}
+
+h4{
+    display: block;
+    width: 100%;
+    background-color: var(--dark) ;
+    color: var(--light);
+    border-radius: 7px 7px 0 0;
+}
+
+
+img{
+    display: block;
+    background-color: var(--indigo);
+    border: 2px solid black;
+}
+
+.span-article{
+    padding: 8px;
+    border: 2px solid gold;
+    position: absolute;
+    bottom: 0;
+    right:0;
+    left: 0;
+    color: var(--light);
+    background-color: var(--dark);
+    opacity: 0.6;
+}
+
+footer{
+    background-color: var(--dark);
+    color: var(--teal);
+    font-style: italic;
+}
+
+footer > *{
+    margin: 1vw;
+}
+
+.bot-span{
+    display: inline-block;
+    width: calc(40% - 0.5rem);
+    padding: 0.5rem;
+    margin: 0.5rem;
+    align-items: center;
+}
+
+#teacher-b{     
+    font-style: normal;
+    color: var(--light);
+}
+
+button{
+    display: inline-block;
+    width: calc(30% - 0.5rem);
+    padding: 0.5rem;
+    margin: 0.5rem;
+    background-color: var(--light);
+    border-radius: 6px;
+}
+
+
+@media (min-width: 720px) and (max-width: 992px) {
+ 
+    section{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        background-color: var(--bg);
+        gap: 0.5rem;
+    }
+
+    nav{
+        order:1;
+    }
+}
+
+@media (min-width: 920px) {
+
+    header{
+        grid-area: top;
+    }
+
+    body{
+        display: grid;
+        grid-template-areas:  
+        ". top"
+        "nav section"
+        "bot bot";
+        grid-template-columns:auto 1fr;
+    }
+
+    nav{
+        grid-area: nav;
+        display: grid;
+        flex-direction: column;
+        gap: 0.5vh;
+    }
+
+    .nav-item{
+        width: auto;
+    }
+ 
+	section{
+		grid-template-columns:1fr 1fr 1fr;
+		grid-area:section;
+	}
+
+    footer{
+        grid-area: bot;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    button{
+        width: 100%;
+    }
+    
+    label{
+        width: 100%;
+    }
+}

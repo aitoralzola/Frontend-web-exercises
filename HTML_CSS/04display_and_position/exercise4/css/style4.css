@@ -1,0 +1,22 @@
+header, footer{
+    text-align: center;
+
+}
+
+.nav-links {
+    text-align: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 16px;
+    background-color: lightsteelblue;
+    position: sticky;
+    top: 0;
+    width: 100vw;
+}
+
+.link-style{
+    background-color: rgb(232, 236, 241);
+    border-radius: 4px;
+    padding: 10px;
+}

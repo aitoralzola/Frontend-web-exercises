@@ -1,0 +1,9 @@
+header, footer{
+    text-align: center;
+}
+
+.social-link {
+    position: sticky;
+    text-align: right;
+    bottom: 0px;
+}

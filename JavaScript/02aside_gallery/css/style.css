@@ -1,0 +1,65 @@
+header, footer{
+    text-align: center;
+    height: fit-content;
+}
+
+header{ 
+    grid-area: top; 
+}
+
+body{
+    display: grid;
+    grid-template-areas: 
+    "top top"
+    "aside section"
+    "bot bot";
+    grid-template-columns: 25% 75%; 
+    grid-template-rows: 0.2fr 2fr 0.2fr;
+}
+
+aside{
+    grid-area: aside;
+    padding: 1.5rem;
+    width: 25vw;
+    border: 1px solid black;
+    overflow: scroll;
+}
+
+aside img{
+    display: block;
+    float: center;
+    max-width: 90%;
+}
+
+section{
+    grid-area: section;
+    position: relative;
+    padding: 12px;
+    margin: 0;
+    border: 1px solid black;
+    background-color: gray;
+}
+
+#image{
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-color: green;
+    text-align: center;
+    height: 100%;
+}
+
+#imageText{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    border: 1px solid black;
+    background-color: rgb(78, 160, 78);
+}
+
+footer{  
+    grid-area: bot;
+    margin: 12px;
+    text-align: left;
+}

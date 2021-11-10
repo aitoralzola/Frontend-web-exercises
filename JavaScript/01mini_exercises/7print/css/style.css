@@ -1,0 +1,24 @@
+header, footer{
+    text-align: center;
+}
+
+header{  
+    background-color: gray;
+    color: white;
+}
+
+
+@media print{
+    #btn-print{
+        visibility: hidden; 
+    }
+}
+
+footer{  
+    width: 100%;
+    background-color: darkred;
+    color: white;
+    clear: right;
+    bottom: 0;
+    position: absolute;
+}

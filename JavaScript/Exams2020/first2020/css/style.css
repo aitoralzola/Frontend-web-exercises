@@ -1,0 +1,288 @@
+:root {
+    --grey: #636363;
+    --mondragon_turquoise: #008996;
+    --selected: steelblue;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+img{
+    display: block;
+}
+
+/*MAIN*/
+
+body{
+    background-color: var(--mondragon_turquoise);
+}
+
+header{
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+nav{
+    width: 100%;
+    gap: 0.5rem;
+    font-weight: 700;
+    background-color: var(--grey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+
+}
+
+.nav-item{
+    width: 100%;
+    border-radius: 4px;
+    background-color: var(--mondragon_turquoise);
+    color: white;   
+    height: fit-content;
+}
+
+.nav-item:last-child{
+    margin-bottom: 4px;
+}
+.nav-item:hover{
+    background-color: white;
+    color: var(--grey);
+}
+
+
+main{
+    background-color: var(--mondragon_turquoise);
+}
+
+#mu-logo{
+    width: 100%;
+    height: auto;
+    left: 0;
+}
+
+.cite-card{
+    position: relative;
+    background-color: var(--grey);
+    border-radius: 8px;
+    margin: 0.5rem;
+    height: fit-content;
+}
+
+.top-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.person-name{
+    width: max-content;
+    font-weight: 700;
+    margin-left: 4px;
+}
+
+.close-btn{
+    width: fit-content;
+    border-radius: 0 9px 0 0;
+    background-color: whitesmoke;
+    color: var(--grey);
+}
+
+.person-img{
+    width: 100%;
+    height: auto; 
+}
+
+.citation{
+    display: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-radius: 0 0 9px 9px;
+    box-shadow: 0 0 8px whitesmoke;
+    opacity: 0.6;
+    background-color: lightgrey;
+}
+
+.citation-span{
+    width: 100%;
+    bottom: 0;
+    padding: 8px;
+    width: fit-content;
+    word-wrap: break-word;
+    border-radius: 0 0 9px 9px;
+}
+
+
+.citation:hover{
+    box-shadow: none;
+}
+
+
+
+
+
+/*################ F O O T E R #################*/
+
+footer{
+    background-color: var(--mondragon_turquoise);
+    height: fit-content;
+}
+
+footer > *{
+    padding: 1.5rem;
+
+}
+
+button{
+    box-sizing: border-box;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: var(--grey);
+    color: white;
+}
+
+button:hover{
+    background-color: white;
+    color: var(--grey);
+}
+
+#mu-logo-bot{
+    background-color: var(--mondragon_turquoise);
+    display: inline-block;
+    box-sizing: border-box;
+    width: 35%;
+    height: auto;
+}
+
+
+
+/*##########################################-@MEDIA QUERYS-##############################*/
+
+
+
+/*Medium*/
+
+
+@media (min-width: 600px){
+
+    nav{
+        display: flex;
+        flex-direction: row;
+    }
+ 
+    main{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        border: 2px solid pink
+    }
+
+    #mu-logo{
+        height: 4rem;
+        width: auto;
+    }
+
+    footer{
+        width: 100%;
+    }
+
+    footer button{   
+        display: inline; 
+        vertical-align: top;
+        width: 40%;
+    }
+
+    #mu-logo-bot{
+        display: inline;
+        height: auto;
+        width: calc(20% - 1.5rem);
+        bottom: 0;
+    }
+}
+
+
+
+/*Large*/
+
+
+@media (min-width: 1024px) {
+
+    body{
+        display: grid;
+        grid-template-areas:
+        "nav main"
+        "bot bot";
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    header{
+        grid-area: top;
+    }
+
+    nav{
+        grid-area: nav;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    #mu-logo{
+        width: 100%;
+        height: auto;
+    }
+
+    main{
+        grid-area: main;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    footer{
+        grid-area: bot;
+    }
+}
+
+
+
+/*Very Large*/
+
+
+@media (min-width: 1280px){
+
+    main{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+
+    #mu-logo{
+        height: auto;
+        width: 100%;
+    }
+}
+
+
+
+/*############# JS STYLE ##################*/
+
+.selected-style{
+    background-color: var(--selected);
+}
+
+.dark-style{
+    background-color: black ; 
+    color: white ;
+}
+
+.hide-style{
+    display: none;
+}

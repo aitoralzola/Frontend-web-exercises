@@ -1,0 +1,78 @@
+section{
+    margin: 16px;
+}
+
+*::selection{
+    background-color:  yellow;
+}
+
+h1, h2{
+    color: darkblue;
+}
+
+.special{ /**/
+    font-weight: bold;
+}
+
+.special  > p{
+    color: darkred;
+}
+
+.special > * {  /*All direct children inside special element*/
+    margin: 0;
+    padding: 16px;
+    border: 1px solid black;
+}
+
+.special > p:first-child{ /*Radius TOP*/
+    border-radius: 8px 8px 0 0;
+}
+
+.special > div{
+    border-radius: 0 0 8px 8px;
+}
+
+.special > p:last-child{
+    border-radius: 8px;   
+}
+
+
+.special2{
+    background-color: steelblue;
+    border: 2px solid black;
+    margin: 0;
+    padding: 0;
+}
+
+.special2 > * {  /*All direct children inside special element*/
+    background-color:  aliceblue;
+    padding: 16px;
+    margin: 0;
+}
+
+/*do something so there is a margin between the direct children of special2 elements
+but not at the beginning or ending of the element*/
+
+.special2 * + *{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.mycheckbox:checked > span{
+    background-color: lightblue;
+}
+
+
+.mycheckbox:checked + span::before{
+    content: "==========>";
+}
+
+.mycheckbox:checked + span::after{
+    content: "<==========";
+}
+
+/*input[type="checkbox"] == .mycheckbox*/
+
+input[type="checkbox"]:checked ~ span{  /*All spans after checked checkbox*/
+    font-weight: bold;
+}

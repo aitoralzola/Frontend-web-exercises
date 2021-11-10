@@ -1,0 +1,129 @@
+*{
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+*::selection{
+background-color: yellow;
+}
+
+p{
+    background-color: #cecece;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+span{
+    background-color: lightblue;
+    padding: 0;
+    margin: 0; 
+}
+
+a{
+    border: none;
+}
+
+label{
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.goiburua{
+    padding-top: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+}
+
+.styled-link{
+    padding: 8px;
+    margin: 8px;
+    margin-bottom: 1px;
+    color: white;
+    background-color: black;
+    border: 2px solid rgb(20, 20, 20);   
+    display: inline-block; 
+} 
+
+.styled-link::first-letter{
+    font-size: 32px;
+}
+
+.non-styled-link{
+    padding: 12px;
+    margin: 8px;
+    margin-bottom: 1px;
+    color: black;
+    border: 2px solid rgb(20, 20, 20);
+    display: inline-block;
+}
+
+
+p::first-letter{
+    font-size: 32px;
+}
+
+.p1-box, .p2-box, .p3-box{
+    background-color: lightgray;
+}
+
+.p1-box span{
+    border: 2px solid black;
+    background-color: aqua;
+    color: black;
+}
+
+.p2-box span, .p3-box span{
+    border: 2px solid black;
+    background-color: aqua;
+    color: red;
+}
+
+.p3-box{
+    color: red;
+}
+
+/*********************************************SECOND PAGE***********************************/
+
+.listaA, .listaB, .listaC{
+    border: none;
+    margin: 0px;
+}
+
+ul, li{
+    border: none;
+    margin: 2px;
+    padding: 5px;
+}
+
+table{
+    border: none;
+    width: 100%;
+}
+
+th::first-letter, td::first-letter{
+    font-size: 32px;
+}
+
+table [href*="mondragon.edu"]{  
+    background-color: lightblue;
+}/*CON el espacio->(child) dentro de la tabla hay algo que contiene eso y se cambia*/
+/*SIN el espacio-> a[href*="mondragon.edu"] ->funciona, se cambia el 'a' directamente*/
+
+.links-tabla{
+    margin: 12px;
+    border: 2px solid black;
+    
+}
+
+input[type=checkbox]{
+    box-shadow: 0 0 15px rgba(0, 168, 173, 0.7);
+}
+
+.checkbox-div{
+    margin: 2px;
+    padding: 5px;
+}

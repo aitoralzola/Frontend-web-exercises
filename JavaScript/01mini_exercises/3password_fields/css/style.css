@@ -1,0 +1,21 @@
+header, footer{
+    text-align: center;
+}
+
+header{  
+    background-color: gray;
+    color: white;
+}
+
+#aviso1, #aviso2{
+    color: red;
+}
+
+footer{  
+    width: 100%;
+    background-color: darkred;
+    color: white;
+    clear: right;
+    bottom: 0;
+    position: absolute;
+}

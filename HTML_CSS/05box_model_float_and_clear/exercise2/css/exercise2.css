@@ -1,0 +1,56 @@
+header, footer{
+    text-align: center;
+}
+
+header{
+    width: 100%;
+    padding: 20px;
+    background-color: lightcoral;
+}
+
+.nav-links{
+    text-align: center;
+    background-color: lightsteelblue;
+    width: 75%;
+    float: left;
+}
+
+.link-style{
+    background-color: rgb(91, 151, 230); 
+    box-sizing: border-box;
+    padding: 1rem 3rem;
+    margin: 1rem;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid black;
+    width: calc(25%-2rem);
+}
+
+.text-div{
+    width: 75%;
+    background-color: lightskyblue;
+    float: left;
+}
+
+.lista-aside{
+    background-color: lightseagreen;
+    width: 25%;
+    float: right;
+}
+
+.lista-aside > ul{
+    position: relative;
+    left: 50%; 
+    padding: 0;
+}
+
+footer{
+    width: 100%;  
+    padding: 0.5rem;
+    background-color: darkred;
+    color: white;
+    clear: right;
+
+    /*bottom: 0;
+    position: absolute;*/ /*Para dejarlo anclado abajo*/
+}

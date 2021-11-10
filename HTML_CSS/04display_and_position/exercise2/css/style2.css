@@ -1,0 +1,15 @@
+header, footer{
+    text-align: center;
+}
+
+
+.text-div span {
+
+    background-color: yellow;
+    position: relative;
+}
+
+.text-div span:hover {
+
+    top: -0.5em;
+}
